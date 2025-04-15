@@ -16,12 +16,12 @@ function TopRest() {
     }, [baseData]);
     
     function slidePrev() {
-        setVal((prev) => Math.max(prev - 300, 0)); // prevent going left too far
+        setVal((prev) => Math.max(prev - 1000, 0)); // prevent going left too far
     }
     function slideNext() {
         setVal((prev) => {
-            const maxScroll = (data.length * 150) - 600; // totalWidth - visible width
-            return Math.min(prev + 300, maxScroll);
+            const maxScroll = (data.length * 305) - 600; // totalWidth - visible width
+            return Math.min(prev + 1000, maxScroll);
         });
     }
     return (
@@ -41,7 +41,8 @@ function TopRest() {
                 {data.map((restaurant,index) => (
                     <div key={index}>
                         <div className="w-[285px] h-[182px] relative">
-                            <img className="h-[100%] min-w-full object-cover rounded-3xl bg-gradient-to-br" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + restaurant?.info?.cloudinaryImageId} alt={restaurant.name} />
+                            <img className="h-[100%] min-w-full object-cover rounded-3xl bg-gradient-to-br relative" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + restaurant?.info?.cloudinaryImageId} alt={restaurant.name} />
+                            <div className="top-0 bg bg-gradient-to-t from-black from-1% to-transparent to-50% rounded-3xl w-full h-full absolute"></div>
                         </div>
                         <div className="mt-[1%] pl-[6%] w-[285px]">
                             <div>
