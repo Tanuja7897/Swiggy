@@ -15,11 +15,11 @@ function ResWithOnlineDeli() {
 
     return (
         <>
-            <div className='flex justify-between items-center mb-2'>
+            <div className='mb-2'>
                 <h1 className='font-bold text-xl'>Restaurants with online food delivery in Noida 1</h1>
-                <div className="flex transition-transform duration-400 ease-in-out gap-10 justify-between items-center" >
+                <div className="mt-7 grid grid-cols-3 gap-4" >
                     {data.map((restaurant, index) => (
-                        <ResCards index={index} restaurant={restaurant}></ResCards>
+                        <ResCards index={index} restaurant = {restaurant} w={10} h={10}></ResCards>
                     ))}
                 </div>
             </div>
