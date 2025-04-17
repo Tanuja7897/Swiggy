@@ -2,7 +2,7 @@ import Quizine from "./Quizine";
 import TopRest from "./TopRest";
 import ResWithOnlineDeli from "./ResWithOnlineDeli";
 import { UserProvider } from "../utils/context";
-
+import BestPlacesCities from "./BestPlacesCities";
 function Body() {
   return (
     <UserProvider>
@@ -11,6 +11,7 @@ function Body() {
           <Quizine />
           <TopRest />
           <ResWithOnlineDeli/>
+          <BestPlacesCities/>
         </div>
       </div>
     </UserProvider>
