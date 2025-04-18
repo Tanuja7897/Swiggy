@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 function Header(){
     const headerData = [
         {icon: "fi fi-rr-shopping-bag", text: "Swiggy Corporate"},
@@ -27,6 +28,7 @@ function Header(){
                     </div>
                 </div>
             </nav>
+            <Outlet></Outlet>
         </>
     )
 }

@@ -38,12 +38,12 @@ function TopRest() {
                     </div>
                 </div>
             </div>
-            <div className="flex transition-transform duration-400 ease-in-out gap-10 justify-between items-center" style={{ transform: `translateX(-${val}px)` }}>
+            <div className="flex transition-transform duration-400 ease-in-out gap-10" style={{ transform: `translateX(-${val}px)` }}>
                 {data.map((restaurant,index) => (
                     <ResCards index={index} restaurant = {restaurant} w={285} h={182}></ResCards>
                 ))}
             </div>
-            <hr className='border-b border-b-neutral-500 mt-[5%] mb-[5%]' style={{ color : "#D3D3D3"}}></hr>
+            <hr className='border-b border-b-neutral-500 mt-[3%] mb-[3%]' style={{ color : "#D3D3D3"}}></hr>
         </>
     )
 }
