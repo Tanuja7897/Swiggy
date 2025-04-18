@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from '../utils/context.jsx';
 import ResCards from "./ResCards.jsx";
+import { Link } from "react-router-dom";
 function TopRest() {
     const baseData = useContext(UserContext);
     const [data, setData] = useState([]); // For data coming from context API
@@ -39,11 +40,14 @@ function TopRest() {
                 </div>
             </div>
             <div className="flex transition-transform duration-400 ease-in-out gap-10" style={{ transform: `translateX(-${val}px)` }}>
+            <Link to={"resMenu/"} className="flex gap-10">
                 {data.map((restaurant,index) => (
                     <ResCards index={index} restaurant = {restaurant} w={285} h={182}></ResCards>
                 ))}
+            </Link>
             </div>
             <hr className='border-b border-b-neutral-500 mt-[3%] mb-[3%]' style={{ color : "#D3D3D3"}}></hr>
+            
         </>
     )
 }
